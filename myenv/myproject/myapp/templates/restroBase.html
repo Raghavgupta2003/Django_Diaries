@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+
+    <style>
+        {% block css %}
+        {% endblock %}
+    </style>
+</head>
+<body>
+    {% include "restroHeader.html" %}
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

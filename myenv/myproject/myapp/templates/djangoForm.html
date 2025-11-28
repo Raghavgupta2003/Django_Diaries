@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p}} 
+        <!-- this form in form.as_p is the same variable used in views.py to create instance of InputForm class -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

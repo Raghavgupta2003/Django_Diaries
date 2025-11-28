@@ -1,0 +1,28 @@
+{% extends "restroBase.html" %}
+
+{% block title %}
+    Restaurant MENU
+{% endblock %}
+
+{% block css %}
+    h1 {
+        color: green;
+    }
+{% endblock %}
+
+{% block content %}
+        <h1>This is the Menu Page</h1>
+
+        <table border="1">
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+            {%  for item in items %}
+            <tr>
+                <td><a href="{% url 'MenuItemsDetail' item_name=item.name %}">{{ item.name }}</a></td>
+                <td>{{ item.cost }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+{% endblock %}

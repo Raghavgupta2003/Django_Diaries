@@ -1,0 +1,9 @@
+<h1>Menu items are as follows:</h1>
+
+<ul>
+    {% for item in items %}
+        {% if item.price == 'free' %}
+        <li>{{ item.name }} - {{ item.price }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {%csrf_token %}
+        username: <input type="text" name="username" required><br>
+        email: <input type="email" name="email" required><br>
+        password: <input type="password" name="password" required><br>
+        <input type="submit" value="Signup">
+        {% if accounts_created %}
+            <p style="color: green;">Account created successfully!</p>
+        {% endif %}
+        {% if not accounts_created %}
+            <p style="color: red;">Account creation failed. Please try again.</p>
+        {% endif %}
+    </form>
+</body>
+</html>
